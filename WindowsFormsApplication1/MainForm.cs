@@ -311,7 +311,7 @@ namespace WindowsFormsApplication1
                                 
 
                                 //make sure that we don't overextend past the array
-                                if (i + NumberOfWords >= TotalStringLength) continue;
+                                if (i + NumberOfWords - 1 >= TotalStringLength) continue;
 
                                 //make the target string
                                 
@@ -348,10 +348,7 @@ namespace WindowsFormsApplication1
                                 }
                              }
                             //if there isn't an exact match, we have to go through the wildcards
-                            else
-                                {
-
-                                    if (WildCardArrays.ContainsKey(NumberOfWords)) { 
+                            if (WildCardArrays.ContainsKey(NumberOfWords)) { 
                                         for (int j = 0; j < WildCardArrays[NumberOfWords].Length; j++)
                                         {
                                             if (PrecompiledWildcards[WildCardArrays[NumberOfWords][j]].Matches(TargetString).Count > 0)
@@ -373,9 +370,6 @@ namespace WindowsFormsApplication1
                                             }
                                         }
                                     }
-
-
-                            }
 
 
                             }
