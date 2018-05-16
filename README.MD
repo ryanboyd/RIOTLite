@@ -1,0 +1,1 @@
+RIOTLite is the lightweight, faster, and (probably) all around better version of RIOTScan. It only works with user-made dictionaries in a LIWC-style format.
