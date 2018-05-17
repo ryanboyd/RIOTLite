@@ -49,6 +49,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -217,15 +225,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RIOTLite"
-        "ProductCode" = "8:{A6153410-0DA8-4806-AA93-6288B6E2D49F}"
-        "PackageCode" = "8:{489EEB2C-5FAA-4154-8D39-50B1044475E8}"
+        "ProductCode" = "8:{36DD3404-8DC0-4E67-BD10-695FB006031B}"
+        "PackageCode" = "8:{55CD888F-72DA-40CA-AB7C-C99BC538CD60}"
         "UpgradeCode" = "8:{949907D7-BEBC-4AAA-BCC3-6630A500D454}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:0.86"
+        "ProductVersion" = "8:1.01"
         "Manufacturer" = "8:Ryan L. Boyd, Ph.D."
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
