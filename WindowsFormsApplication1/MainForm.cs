@@ -212,7 +212,7 @@ namespace WindowsFormsApplication1
             }
             catch
             {
-                MessageBox.Show("RIOTLite encountered an issue while parsing your dictionary. Please check to make sure that it is correctly formatted (and contains no duplicate entries) and that it is not currently open in another application.");
+                MessageBox.Show("RIOTLite encountered an issue while parsing your dictionary. Please check to make sure that it is correctly formatted and that it is not currently open in another application. It is also important that your dictionary contains no duplicate entries.");
                 return;
             }
 
@@ -441,10 +441,6 @@ namespace WindowsFormsApplication1
             MessageBox.Show("RIOTLite has finished analyzing your texts.", "Analysis Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void WordWindowSizeTextbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
 
 
 
