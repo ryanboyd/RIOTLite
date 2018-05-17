@@ -41,18 +41,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.LoadDictionaryButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BgWorker
             // 
-            this.BgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgWorker_DoWork);
+            this.BgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgWorkerClean_DoWork);
             this.BgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgWorker_RunWorkerCompleted);
             // 
             // ScanSubfolderCheckbox
             // 
             this.ScanSubfolderCheckbox.AutoSize = true;
-            this.ScanSubfolderCheckbox.Location = new System.Drawing.Point(89, 211);
+            this.ScanSubfolderCheckbox.Location = new System.Drawing.Point(89, 255);
             this.ScanSubfolderCheckbox.Name = "ScanSubfolderCheckbox";
             this.ScanSubfolderCheckbox.Size = new System.Drawing.Size(108, 17);
             this.ScanSubfolderCheckbox.TabIndex = 2;
@@ -62,7 +63,7 @@
             // StartButton
             // 
             this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartButton.Location = new System.Drawing.Point(67, 173);
+            this.StartButton.Location = new System.Drawing.Point(67, 217);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(152, 32);
             this.StartButton.TabIndex = 3;
@@ -100,7 +101,7 @@
             // 
             this.FilenameLabel.AutoEllipsis = true;
             this.FilenameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FilenameLabel.Location = new System.Drawing.Point(12, 242);
+            this.FilenameLabel.Location = new System.Drawing.Point(12, 286);
             this.FilenameLabel.Name = "FilenameLabel";
             this.FilenameLabel.Size = new System.Drawing.Size(260, 15);
             this.FilenameLabel.TabIndex = 6;
@@ -152,12 +153,24 @@
             this.openFileDialog.FileName = "DictionaryFile.txt";
             this.openFileDialog.Filter = "Dictionary Files|*.dic";
             // 
+            // LoadDictionaryButton
+            // 
+            this.LoadDictionaryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadDictionaryButton.Location = new System.Drawing.Point(67, 171);
+            this.LoadDictionaryButton.Name = "LoadDictionaryButton";
+            this.LoadDictionaryButton.Size = new System.Drawing.Size(152, 32);
+            this.LoadDictionaryButton.TabIndex = 20;
+            this.LoadDictionaryButton.Text = "Load Dictionary";
+            this.LoadDictionaryButton.UseVisualStyleBackColor = true;
+            this.LoadDictionaryButton.Click += new System.EventHandler(this.LoadDictionaryButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(284, 271);
+            this.ClientSize = new System.Drawing.Size(284, 311);
+            this.Controls.Add(this.LoadDictionaryButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.FilenameLabel);
             this.Controls.Add(this.StartButton);
@@ -165,8 +178,8 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 310);
-            this.MinimumSize = new System.Drawing.Size(300, 310);
+            this.MaximumSize = new System.Drawing.Size(300, 350);
+            this.MinimumSize = new System.Drawing.Size(300, 350);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RIOTLite";
@@ -190,6 +203,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button LoadDictionaryButton;
     }
 }
 
