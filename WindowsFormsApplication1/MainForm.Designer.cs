@@ -42,6 +42,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.LoadDictionaryButton = new System.Windows.Forms.Button();
+            this.RawWCCheckbox = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // ScanSubfolderCheckbox
             // 
             this.ScanSubfolderCheckbox.AutoSize = true;
-            this.ScanSubfolderCheckbox.Location = new System.Drawing.Point(89, 255);
+            this.ScanSubfolderCheckbox.Location = new System.Drawing.Point(89, 282);
             this.ScanSubfolderCheckbox.Name = "ScanSubfolderCheckbox";
             this.ScanSubfolderCheckbox.Size = new System.Drawing.Size(108, 17);
             this.ScanSubfolderCheckbox.TabIndex = 2;
@@ -63,7 +64,7 @@
             // StartButton
             // 
             this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartButton.Location = new System.Drawing.Point(67, 217);
+            this.StartButton.Location = new System.Drawing.Point(67, 244);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(152, 32);
             this.StartButton.TabIndex = 3;
@@ -101,7 +102,7 @@
             // 
             this.FilenameLabel.AutoEllipsis = true;
             this.FilenameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FilenameLabel.Location = new System.Drawing.Point(12, 286);
+            this.FilenameLabel.Location = new System.Drawing.Point(12, 313);
             this.FilenameLabel.Name = "FilenameLabel";
             this.FilenameLabel.Size = new System.Drawing.Size(260, 15);
             this.FilenameLabel.TabIndex = 6;
@@ -136,6 +137,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.RawWCCheckbox);
             this.groupBox2.Controls.Add(this.PunctuationBox);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.EncodingDropdown);
@@ -143,7 +145,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 142);
+            this.groupBox2.Size = new System.Drawing.Size(260, 167);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Text Reading Controls";
@@ -156,7 +158,7 @@
             // LoadDictionaryButton
             // 
             this.LoadDictionaryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadDictionaryButton.Location = new System.Drawing.Point(67, 171);
+            this.LoadDictionaryButton.Location = new System.Drawing.Point(67, 198);
             this.LoadDictionaryButton.Name = "LoadDictionaryButton";
             this.LoadDictionaryButton.Size = new System.Drawing.Size(152, 32);
             this.LoadDictionaryButton.TabIndex = 20;
@@ -164,12 +166,23 @@
             this.LoadDictionaryButton.UseVisualStyleBackColor = true;
             this.LoadDictionaryButton.Click += new System.EventHandler(this.LoadDictionaryButton_Click);
             // 
+            // RawWCCheckbox
+            // 
+            this.RawWCCheckbox.AutoSize = true;
+            this.RawWCCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RawWCCheckbox.Location = new System.Drawing.Point(6, 133);
+            this.RawWCCheckbox.Name = "RawWCCheckbox";
+            this.RawWCCheckbox.Size = new System.Drawing.Size(208, 19);
+            this.RawWCCheckbox.TabIndex = 21;
+            this.RawWCCheckbox.Text = "Raw Category Word Count Output";
+            this.RawWCCheckbox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(284, 311);
+            this.ClientSize = new System.Drawing.Size(284, 336);
             this.Controls.Add(this.LoadDictionaryButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.FilenameLabel);
@@ -178,8 +191,8 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 350);
-            this.MinimumSize = new System.Drawing.Size(300, 350);
+            this.MaximumSize = new System.Drawing.Size(300, 375);
+            this.MinimumSize = new System.Drawing.Size(300, 375);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RIOTLite";
@@ -204,6 +217,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button LoadDictionaryButton;
+        private System.Windows.Forms.CheckBox RawWCCheckbox;
     }
 }
 

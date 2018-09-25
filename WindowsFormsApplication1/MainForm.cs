@@ -78,6 +78,7 @@ namespace WindowsFormsApplication1
 
 
                                 DictData.OutputFileLocation = saveFileDialog.FileName;
+                                DictData.RawWordCounts = RawWCCheckbox.Checked;
 
                                 if (DictData.OutputFileLocation != "") {
 
@@ -87,6 +88,7 @@ namespace WindowsFormsApplication1
                                     PunctuationBox.Enabled = false;
                                     EncodingDropdown.Enabled = false;
                                     LoadDictionaryButton.Enabled = false;
+                                    RawWCCheckbox.Enabled = false;
                             
                                     BgWorker.RunWorkerAsync(DictData);
                                 }
@@ -301,7 +303,16 @@ namespace WindowsFormsApplication1
                         {
 
                             OutputString[2] = (((double)NumberOfMatches / TotalStringLength) * 100).ToString();
-                            for (int i = 0; i < DictData.NumCats; i++) OutputString[i + 3] = (((double)DictionaryResults[DictData.CatValues[i]] / TotalStringLength) * 100).ToString();
+
+                            if (DictData.RawWordCounts)
+                            {
+                                for (int i = 0; i < DictData.NumCats; i++) OutputString[i + 3] = DictionaryResults[DictData.CatValues[i]].ToString();
+                            }
+                            else
+                            {
+                                for (int i = 0; i < DictData.NumCats; i++) OutputString[i + 3] = (((double)DictionaryResults[DictData.CatValues[i]] / TotalStringLength) * 100).ToString();
+                            }
+                                
 
                         }
                         else
@@ -343,6 +354,7 @@ namespace WindowsFormsApplication1
             PunctuationBox.Enabled = true;
             EncodingDropdown.Enabled = true;
             LoadDictionaryButton.Enabled = true;
+            RawWCCheckbox.Enabled = true;
             FilenameLabel.Text = "Finished!";
             MessageBox.Show("RIOTLite has finished analyzing your texts.", "Analysis Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -365,6 +377,8 @@ namespace WindowsFormsApplication1
 
             public string[] CatNames { get; set; }
             public string[] CatValues { get; set; }
+
+            public bool RawWordCounts { get; set; }
 
             //yeah, we're going full inception with this variable. dictionary inside of a dictionary inside of a dictionary
             //while it might seem unnecessarily complicated (and it might be), it makes sense.
