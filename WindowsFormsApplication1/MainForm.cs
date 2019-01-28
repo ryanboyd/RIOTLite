@@ -535,7 +535,7 @@ namespace WindowsFormsApplication1
                             DictData.FullDictionary["Wildcards"].Add(Words_In_Entry, new Dictionary<string, string[]> { { EntryRow[0].ToLower(), EntryRow.Skip(1).ToArray() } });
                             WildCardLists.Add(Words_In_Entry, new List<string>(new string[] { EntryRow[0].ToLower() }));
                         }
-                        DictData.PrecompiledWildcards.Add(EntryRow[0].ToLower(), new Regex(Regex.Escape(EntryRow[0].ToLower()).Replace("\\*", ".*"), RegexOptions.Compiled));
+                        DictData.PrecompiledWildcards.Add(EntryRow[0].ToLower(), new Regex("^" + Regex.Escape(EntryRow[0].ToLower()).Replace("\\*", ".*"), RegexOptions.Compiled));
 
                     }
                     else

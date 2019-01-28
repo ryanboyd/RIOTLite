@@ -130,7 +130,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:RIOTLite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:RIOTLite, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_8242100171AC4985A525A58212F7FF5E"
@@ -233,15 +233,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RIOTLite"
-        "ProductCode" = "8:{09989B06-8C86-4D18-A9E5-8773A93FE97B}"
-        "PackageCode" = "8:{435E52AA-BC05-4501-803A-D6B5138DD687}"
+        "ProductCode" = "8:{199F4ABF-664A-4C5C-B6FD-DFA55DE5BAA3}"
+        "PackageCode" = "8:{DA6519B4-1B51-4A0C-A205-EFB5D288E889}"
         "UpgradeCode" = "8:{949907D7-BEBC-4AAA-BCC3-6630A500D454}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.02"
+        "ProductVersion" = "8:1.03"
         "Manufacturer" = "8:Ryan L. Boyd, Ph.D."
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
